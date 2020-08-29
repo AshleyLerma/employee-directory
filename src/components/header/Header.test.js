@@ -7,7 +7,7 @@ import '@testing-library/jest-dom/extend-expect'
 // import Header component
 import Header from './Header';
 
-
+describe("Header", () => {
 test('loads and displays header', async () => {
     // Arrange
     const { container, asFragment, debug } = render(<Header />);
@@ -15,4 +15,5 @@ test('loads and displays header', async () => {
     // Act - user is not interacting with this
     // Assert
     expect(container).toContainHTML(`<h1>Employee Directory</h1>`);
-  })
+  });
+})
