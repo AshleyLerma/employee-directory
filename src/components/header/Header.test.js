@@ -1,14 +1,14 @@
 // import dependencies
-import React from 'react';
+import React from "react";
 // import react-testing methods
-import { render, fireEvent, waitFor, screen } from '@testing-library/react'
+import { render, fireEvent, waitFor, screen } from "@testing-library/react";
 // add custom jest matchers from jest-dom
-import '@testing-library/jest-dom/extend-expect'
+import "@testing-library/jest-dom/extend-expect";
 // import Header component
-import Header from './Header';
+import Header from "./Header";
 
 describe("Header", () => {
-test('loads and displays header', async () => {
+  test("loads and displays header", async () => {
     // Arrange
     const { container, asFragment, debug } = render(<Header />);
     debug();
@@ -16,4 +16,4 @@ test('loads and displays header', async () => {
     // Assert
     expect(container).toContainHTML(`<h1>Employee Directory</h1>`);
   });
-})
+});
