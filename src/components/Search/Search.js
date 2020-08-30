@@ -5,7 +5,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 
 class Search extends Component {
   render() {
-    return;
+    return <Form.Control type='text' placeholder='Search' />;
   }
 }
 
