@@ -10,6 +10,7 @@ class Header extends Component {
           Click on carrots to filter by heading or use the search box to narrow
           your results.
         </h6>
+        <hr />
       </div>
     );
   }
