@@ -14,6 +14,6 @@ describe("Search", () => {
     debug();
     // Act - user is not interacting with this
     // Assert
-    expect(container).toContainHTML();
+    expect(container).toContainHTML("Search");
   });
 });
