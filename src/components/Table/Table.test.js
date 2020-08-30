@@ -8,7 +8,7 @@ import "@testing-library/jest-dom/extend-expect";
 import Table from "./Table";
 
 describe("Table", () => {
-  test("loads and displays table", async () => {
+  test("loads and displays table headers", async () => {
     // Arrange
     const { container, asFragment, debug } = render(<Table />);
     debug();
