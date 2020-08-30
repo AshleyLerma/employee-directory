@@ -4,16 +4,15 @@ import React from "react";
 import { render } from "@testing-library/react";
 // add custom jest matchers from jest-dom
 import "@testing-library/jest-dom/extend-expect";
-// import Header component
-import Search from "./Search";
+// import Table component
+import Table from "./Table";
 
-describe("Search", () => {
-  test("loads and displays search bar", async () => {
+describe("Table", () => {
+  test("loads and displays table headers", async () => {
     // Arrange
-    const { container, debug } = render(<Search />);
-    debug();
+    const { container } = render(<Table />);
     // Act - user is not interacting with this
     // Assert
-    expect(container).toContainHTML("Search");
+    expect(container).toContainHTML("Image", "Name", "Phone", "Email", "DOB");
   });
 });
