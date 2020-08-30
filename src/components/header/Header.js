@@ -4,7 +4,7 @@ import "./Header.css";
 class Header extends Component {
   render() {
     return (
-      <div>
+      <div className='header'>
         <h1>Employee Directory</h1>
         <h3>Use the search box to narrow your results.</h3>
       </div>
