@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import "./Search.css";
-import { Row } from "react-bootstrap";
-import "bootstrap/dist/css/bootstrap.min.css";
+import "node_modules/react-bootstrap-table/dist/react-bootstrap-table-all.min.css";
+import { BootstrapTable, TableHeaderColumn } from "react-bootstrap-table";
 
 class Table extends Component {
   render() {
