@@ -14,6 +14,8 @@ describe("Header", () => {
     debug();
     // Act - user is not interacting with this
     // Assert
-    expect(container).toContainHTML(`<h1>Employee Directory</h1>`);
+    expect(container).toContainHTML(
+      `<h1>Employee Directory</h1><h3>Use the search box to narrow your results.</h3>`
+    );
   });
 });
