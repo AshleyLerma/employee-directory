@@ -51,7 +51,13 @@ class Table extends Component {
     };
     return (
       <Row>
-        <BootstrapTable data={employees} options={options} multiColumnSort={4}>
+        <BootstrapTable
+          data={employees}
+          bordered={false}
+          options={options}
+          multiColumnSort={4}
+          striped
+        >
           <TableHeaderColumn dataField='image'>Image</TableHeaderColumn>
           <TableHeaderColumn dataField='name' isKey={true} dataSort={true}>
             Name
