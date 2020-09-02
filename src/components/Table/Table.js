@@ -3,6 +3,8 @@ import "./Table.css";
 import { BootstrapTable, TableHeaderColumn } from "react-bootstrap-table";
 import "../../../node_modules/react-bootstrap-table/dist/react-bootstrap-table-all.min.css";
 import { Row } from "react-bootstrap";
+import axios from "axios";
+
 var employees = [];
 
 class Table extends Component {
