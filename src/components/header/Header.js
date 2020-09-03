@@ -9,8 +9,8 @@ class Header extends Component {
         <header className='header'>
           <h2>Employee Directory</h2>
           <h6>
-            Click on carrots to filter by heading or use the search box to
-            narrow your results.
+            Click on headers to sort or use the search box to narrow your
+            results.
           </h6>
           <hr />
         </header>
