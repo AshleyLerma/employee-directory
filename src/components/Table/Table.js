@@ -23,6 +23,10 @@ class Table extends Component {
     return `${date.getMonth() + 1}/${date.getDate()}/${date.getFullYear()}`;
   }
 
+  imageFormatter(cell, row) {
+    return <img src={"" + cell + ""} alt='headshot' />;
+  }
+
   getEmployees = async () => {
     var config = {
       method: "get",
@@ -96,7 +100,9 @@ class Table extends Component {
           multiColumnSort={4}
           striped
         >
-          <TableHeaderColumn dataField='image'>Image</TableHeaderColumn>
+          <TableHeaderColumn dataField='image' dataFormat={this.imageFormatter}>
+            Image
+          </TableHeaderColumn>
           <TableHeaderColumn dataField='name' isKey={true} dataSort={true}>
             Name
           </TableHeaderColumn>
