@@ -18,6 +18,15 @@ class Table extends Component {
     this.cleanSort = this.cleanSort.bind(this);
   }
 
+  formatDate(dateGiven) {
+    var date = new Date(dateGiven);
+    return `${date.getMonth() + 1}/${date.getDate()}/${date.getFullYear()}`;
+  }
+
+  imageFormatter(cell, row) {
+    return <img src={"" + cell + ""} alt='headshot' />;
+  }
+
   getEmployees = async () => {
     var config = {
       method: "get",
@@ -33,7 +42,7 @@ class Table extends Component {
             name: `${res.data.results[i].name.first} ${res.data.results[i].name.last}`,
             phone: res.data.results[i].phone,
             email: res.data.results[i].email,
-            dob: res.data.results[i].dob.date,
+            dob: this.formatDate(res.data.results[i].dob.date),
           };
           allEmployees.push(person);
         }
@@ -91,7 +100,9 @@ class Table extends Component {
           multiColumnSort={4}
           striped
         >
-          <TableHeaderColumn dataField='image'>Image</TableHeaderColumn>
+          <TableHeaderColumn dataField='image' dataFormat={this.imageFormatter}>
+            Image
+          </TableHeaderColumn>
           <TableHeaderColumn dataField='name' isKey={true} dataSort={true}>
             Name
           </TableHeaderColumn>
