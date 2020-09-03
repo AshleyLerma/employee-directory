@@ -6,7 +6,7 @@ import { Container } from "react-bootstrap";
 
 function App() {
   return (
-    <Container>
+    <Container id='container'>
       <Header />
       <Search />
       <Table />
