@@ -15,11 +15,4 @@ describe("Table", () => {
     // Assert
     expect(container).toContainHTML("Image", "Name", "Phone", "Email", "DOB");
   });
-  test("loads and displays employee information", async () => {
-    // Arrange
-    const { container } = render(<Table />);
-    // Act - user is not interacting with this
-    // Assert
-    expect(container).toContainHTML();
-  });
 });
