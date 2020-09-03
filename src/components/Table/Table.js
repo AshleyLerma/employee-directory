@@ -4,6 +4,7 @@ import { BootstrapTable, TableHeaderColumn } from "react-bootstrap-table";
 import "../../../node_modules/react-bootstrap-table/dist/react-bootstrap-table-all.min.css";
 import { Row } from "react-bootstrap";
 import axios from "axios";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 class Table extends Component {
   constructor() {
@@ -92,13 +93,14 @@ class Table extends Component {
       onSortChange: this.onSortChange,
     };
     return (
-      <Row>
+      <Row id='table'>
         <BootstrapTable
           data={this.state.employees}
           bordered={false}
           options={options}
           multiColumnSort={4}
           striped
+          search
         >
           <TableHeaderColumn dataField='image' dataFormat={this.imageFormatter}>
             Image
