@@ -18,6 +18,11 @@ class Table extends Component {
     this.cleanSort = this.cleanSort.bind(this);
   }
 
+  formatDate(dateGiven) {
+    var date = new Date(dateGiven);
+    return `${date.getMonth() + 1}/${date.getDate()}/${date.getFullYear()}`;
+  }
+
   getEmployees = async () => {
     var config = {
       method: "get",
@@ -33,7 +38,7 @@ class Table extends Component {
             name: `${res.data.results[i].name.first} ${res.data.results[i].name.last}`,
             phone: res.data.results[i].phone,
             email: res.data.results[i].email,
-            dob: res.data.results[i].dob.date,
+            dob: this.formatDate(res.data.results[i].dob.date),
           };
           allEmployees.push(person);
         }
